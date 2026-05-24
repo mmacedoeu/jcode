@@ -531,6 +531,7 @@ impl App {
             stashed_input: None,
             input_history: App::load_input_history(),
             input_history_index: None,
+            input_history_search: None,
             input_undo_stack: Vec::new(),
             status_notice: None,
             experimental_feature_warnings_seen: HashSet::new(),
@@ -917,6 +918,7 @@ impl App {
             stashed_input: None,
             input_history: App::load_input_history(),
             input_history_index: None,
+            input_history_search: None,
             input_undo_stack: Vec::new(),
             status_notice: None,
             experimental_feature_warnings_seen: HashSet::new(),
@@ -997,6 +999,7 @@ impl App {
         app.is_replay = false;
         app.input_history.clear();
         app.input_history_index = None;
+        app.input_history_search = None;
         app
     }
 

@@ -81,7 +81,10 @@ const REGISTERED_COMMANDS: &[RegisteredCommand] = &[
     ),
     RegisteredCommand::public("/clear", "Clear conversation history"),
     RegisteredCommand::public("/rewind", "Rewind conversation to previous message"),
-    RegisteredCommand::public("/history", "Show input history, /history input N to load entry"),
+    RegisteredCommand::public(
+        "/history",
+        "Show input history, /history input N to load entry",
+    ),
     RegisteredCommand::public("/poke", "Poke model to resume with incomplete todos"),
     RegisteredCommand::public("/plan", "Create a plan-only response in the side panel"),
     RegisteredCommand::public("/improve", "Autonomously improve the repository"),

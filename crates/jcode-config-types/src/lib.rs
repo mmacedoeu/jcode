@@ -1202,3 +1202,17 @@ impl Default for PowerConfig {
         }
     }
 }
+
+/// Input history configuration.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(default)]
+pub struct InputHistoryConfig {
+    /// Maximum number of entries kept in input history (default: 100).
+    pub max_entries: usize,
+}
+
+impl Default for InputHistoryConfig {
+    fn default() -> Self {
+        Self { max_entries: 100 }
+    }
+}

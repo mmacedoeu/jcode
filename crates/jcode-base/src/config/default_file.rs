@@ -456,7 +456,12 @@ desktop_notifications = true
 # jade_relay_reply_enabled = false   # Deliver cloud prompts to one configured live session.
 # jade_relay_launch_enabled = false  # Allow cloud device commands to open headed local sessions.
 # jade_relay_launch_working_dir = "" # Optional default cwd for launched sessions.
-	"#;
+
+[input_history]
+# Maximum number of entries kept in input history (default: 100)
+# Can also be set via JCODE_INPUT_HISTORY_MAX env var.
+# max_entries = 100
+"#;
 
         std::fs::write(&path, default_content)?;
         Ok(path)

@@ -6,11 +6,11 @@
 pub use jcode_config_types::{
     AgentsConfig, AmbientConfig, AuthConfig, AutoJudgeConfig, AutoReviewConfig, CompactionConfig,
     CompactionMode, CrossProviderFailoverMode, DiagramDisplayMode, DiagramPanePosition,
-    DiffDisplayMode, DisplayConfig, FeatureConfig, GatewayConfig, HooksConfig, KeybindingsConfig,
-    MarkdownSpacingMode, NamedProviderAuth, NamedProviderConfig, NamedProviderModelConfig,
-    NamedProviderType, NativeScrollbarConfig, PowerConfig, ProviderConfig, ReasoningDisplayMode,
-    SafetyConfig, SessionPickerResumeAction, SwarmSpawnMode, TerminalConfig, UpdateChannel,
-    WebSearchConfig, WebSearchEngine,
+    DiffDisplayMode, DisplayConfig, FeatureConfig, GatewayConfig, HooksConfig, InputHistoryConfig,
+    KeybindingsConfig, MarkdownSpacingMode, NamedProviderAuth, NamedProviderConfig,
+    NamedProviderModelConfig, NamedProviderType, NativeScrollbarConfig, PowerConfig,
+    ProviderConfig, ReasoningDisplayMode, SafetyConfig, SessionPickerResumeAction,
+    SwarmSpawnMode, TerminalConfig, UpdateChannel, WebSearchConfig, WebSearchEngine,
 };
 use serde::{Deserialize, Serialize};
 use std::collections::{BTreeMap, BTreeSet, HashSet};
@@ -488,6 +488,9 @@ pub struct Config {
 
     /// Auto-judge configuration
     pub autojudge: AutoJudgeConfig,
+
+    /// Input history configuration
+    pub input_history: InputHistoryConfig,
 }
 
 /// Agent Client Protocol adapter configuration.
